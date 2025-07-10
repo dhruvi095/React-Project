@@ -56,22 +56,22 @@ function App() {
 
   return ( 
     <> 
-    <Router>
-  <Header title="My Todos List" searchBar={false} />
-  <Routes>
-    <Route
-      path="/"
-      element={
-        <>
-          <AddTodo addTodo={addTodo} />
-          <Todos todos={todos} onDelete={onDelete} />
-        </>
-      }
-    />
-    <Route path="/about" element={<About />} />
-  </Routes>
-  <Footer />
-</Router>
+   <Router>
+      <Header title="My Todos List" searchBar={false} /> 
+      <Routes>
+        <Route
+  path="/"
+  element={
+    <>
+      <AddTodo addTodo={addTodo} />
+      <Todos todos={todos} onDelete={onDelete} />
+    </>
+  }
+/>
+          <Route exact path="/about" element={ <About />}/> 
+        </Routes> 
+      <Footer />
+    </Router>
 
     </>
   );
